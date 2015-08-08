@@ -1,0 +1,75 @@
+diff --git a/popolo/behaviors/models.py b/popolo/behaviors/models.py
+index 82bb005..3a91bc3 100644
+--- a/popolo/behaviors/models.py
++++ b/popolo/behaviors/models.py
+@@ -11,6 +11,10 @@ from datetime import datetime
+ __author__ = 'guglielmo'
+ 
+ 
++def auto_slug_populate_from(instance):
++    return instance.slug_source
++
++
+ class GenericRelatable(models.Model):
+     """
+     An abstract class that provides the possibility of generic relations
+@@ -83,7 +87,7 @@ class Permalinkable(models.Model):
+     from django.utils.text import slugify
+ 
+     slug = AutoSlugField(
+-        populate_from=lambda instance: instance.slug_source,
++        populate_from=auto_slug_populate_from,
+         unique=True,
+         slugify=slugify
+     )
+diff --git a/popolo/models.py b/popolo/models.py
+index a91afc7..3be3d55 100644
+--- a/popolo/models.py
++++ b/popolo/models.py
+@@ -14,6 +14,10 @@ from .behaviors.models import Permalinkable, Timestampable, Dateframeable, Gener
+ from .querysets import PostQuerySet, OtherNameQuerySet, ContactDetailQuerySet, MembershipQuerySet, OrganizationQuerySet, PersonQuerySet
+ 
+ 
++def auto_slug_populate_from(instance):
++    return instance.slug_source
++
++
+ @python_2_unicode_compatible
+ class Person(Dateframeable, Timestampable, models.Model):
+     """
+@@ -25,7 +29,7 @@ class Person(Dateframeable, Timestampable, models.Model):
+     json_ld_type = "http://www.w3.org/ns/person#Person"
+ 
+     id = AutoSlugField(
+-        populate_from=lambda instance: instance.slug_source,
++        populate_from=auto_slug_populate_from,
+         primary_key=True, max_length=256,
+         slugify=slugify
+     )
+@@ -100,7 +104,7 @@ class Organization(Dateframeable, Timestampable, Permalinkable, models.Model):
+     see schema at http://popoloproject.com/schemas/organization.json#
+     """
+     id = AutoSlugField(
+-        populate_from=lambda instance: instance.slug_source,
++        populate_from=auto_slug_populate_from,
+         primary_key=True, max_length=256,
+         slugify=slugify
+     )
+@@ -180,7 +184,7 @@ class Post(Dateframeable, Timestampable, models.Model):
+     see schema at http://popoloproject.com/schemas/json#
+     """
+     id = AutoSlugField(
+-        populate_from=lambda instance: instance.slug_source,
++        populate_from=auto_slug_populate_from,
+         primary_key=True, max_length=256,
+         slugify=slugify
+     )
+@@ -384,7 +388,7 @@ class Area(GenericRelatable, Dateframeable, Timestampable, models.Model):
+     see schema at http://popoloproject.com/schemas/area.json#
+     """
+     id = AutoSlugField(
+-        populate_from=lambda instance: instance.slug_source,
++        populate_from=auto_slug_populate_from,
+         primary_key=True, max_length=256,
+         slugify=slugify
+     )
