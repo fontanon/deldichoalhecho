@@ -55,12 +55,14 @@ Installing requirements
 Patching django-popolo
 
 ::
+
     cd /home/deldichoalhecho/deldichoalhecho/src/django-popolo
     patch -p1 < /home/deldichoalhecho/deldichoalhecho/patches/django-popolo.diff
     cd /home/deldichoalhecho/deldichoalhecho
 
 
 ::
+
     touch project_site/local_settings.py
     vim project_site/local_settings.py [Anex 7.1]
 
@@ -196,7 +198,7 @@ Patching django-popolo
     server {
 
         listen   80;
-        server_name ddhgobex.fontanon.org;
+        server_name *.fontanon.org;
 
         client_max_body_size 4G;
 

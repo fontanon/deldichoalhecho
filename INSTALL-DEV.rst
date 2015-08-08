@@ -43,12 +43,14 @@ Installing requirements
 Patching django-popolo
 
 ::
+
     cd vdeldichoalhecho/src/django-popolo/
     patch -p1 < ~/deldichoalhecho/patches/django-popolo.diff
     cd
 
 
 ::
+
     touch project_site/local_settings.py
     vim project_site/local_settings.py [Anex 3.1]
 
