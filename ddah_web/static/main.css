@@ -3,6 +3,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     color: #555;
+    font-size: 13px;
     background-color: #FCFCFC;
     -webkit-font-smoothing: antialiased;
     text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -53,10 +54,45 @@ h4 {
   font-weight: 900;
 }
 
+li {
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+ul, ol {
+    margin-top: 0.3em;
+}
+
+ol li ol {
+    list-style-type: lower-alpha;
+}
+
+table {
+    width: 100%;
+    margin: 1em 0;
+    max-width: 100%;
+}
+
+table thead > tr > th,
+table tbody > tr > th,
+table tfoot > tr > th,
+table thead > tr > td,
+table tbody > tr > td,
+table tfoot > tr > td {
+    padding: 0.6em;
+    line-height: 1.4em;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+
+
 .clearfix:after {
   content: "";
   display: table;
   clear: both;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .clearfix {
@@ -90,6 +126,16 @@ h4 {
     margin-bottom: 15px;
 }
 
+.jumbotron h1 {
+    font-size: 34px;
+    text-align: center;
+}
+
+.text-right a {
+    font-size: 1em;
+    color: #72c02c;
+    
+}
 /*NAVBAR*/
 
 .nav {
@@ -102,8 +148,14 @@ h4 {
   color: black;
 }
 
+.header .nav {
+    margin-top: 2.5em;
+}
+
 .nav>li>a:hover, .nav>li>a:focus {
-  background-color: #08173A;
+  background-color: transparent;
+  color: black;
+  border-bottom: 2px solid #72c02c;
 }
 
 .nav>li>a {
