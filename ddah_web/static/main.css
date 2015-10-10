@@ -14,6 +14,7 @@ a {
 }
 
 a:hover  {
+    cursor: pointer;
     color: #72c02c;
     text-decoration: underline;
 }
@@ -400,7 +401,7 @@ div.verification-document.accomplished {
 }
 
 .b-color {
-  background-color: #0F2356;
+    background-color: #dadada;
 }
 
 /*PROGRESSBAR LEGEND*/
@@ -491,7 +492,7 @@ li.not-accomplished:before {
 
 .modal-header {
   border-bottom: none;
-  background: #dadada;
+  background: white;
 }
 
 .close {
