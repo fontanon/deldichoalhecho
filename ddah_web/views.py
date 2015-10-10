@@ -5,6 +5,7 @@ from pystache import Renderer
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 import markdown
+from django.utils.safestring import mark_safe
 
 
 class MoustacheTemplateResponseBase(TemplateResponse):
@@ -68,7 +69,7 @@ class MoustacheFlatPageTemplateResponse(MoustacheTemplateResponseBase):
         del data.summary
         del data.categories
         data.page_title = flatpage.title
-        data.page_content = markdown.markdown(flatpage.content)
+        data.page_content = mark_safe(markdown.markdown(flatpage.content, ['markdown.extensions.extra']))
         data.enable_comments = flatpage.enable_comments
         return data
 
