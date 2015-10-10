@@ -209,6 +209,10 @@ Patching django-popolo
             alias   /home/deldichoalhecho/deldichoalhecho/staticfiles/;
         }
 
+        location /media/ {
+            alias   /home/deldichoalhecho/deldichoalhecho/mediafiles/;
+        }
+
         location / {
             # an HTTP header important enough to have its own Wikipedia entry:
             #   http://en.wikipedia.org/wiki/X-Forwarded-For

@@ -52,6 +52,7 @@ INSTALLED_APPS = (
     'ddah_web',
     'django_ace',
     'ddah_admin_section',
+    'ddah_file',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -145,6 +146,9 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = 'mediafiles'
+MEDIA_URL = '/media/'
 
 
 STATICFILES_DIRS = (
