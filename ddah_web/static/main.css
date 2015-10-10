@@ -17,6 +17,10 @@ a:hover  {
     text-decoration: underline;
 }
 
+.color-green {
+    color: #72c02c;
+}
+
 /*Hs*/
 
 h1 {
@@ -156,11 +160,11 @@ h4 {
 }
 
 .category-menu li a {
-  background: #2ecc71;
-  padding: 0.3em 1em;
-  border-radius: 0.2em;
-  text-decoration: none;
-  color: #fff;
+    background: #00af48;
+    padding: 0.3em 1em;
+    border-radius: 0.2em;
+    text-decoration: none;
+    color: #fff;
 }
 
 .category-menu li a:hover {
@@ -192,9 +196,9 @@ h4 {
 }
 
 .panel-default>.panel-heading {
-  color: #FFF;
-  background-color: #dadada;
-  border-color: transparent;
+    color: #585f69;
+    background-color: #dadada;
+    border-color: transparent;
 }
 
 .panel-group .panel+.panel {
@@ -326,7 +330,7 @@ div.verification-document.accomplished {
 }
 
 .summary-progress {
-    background-color: #E53E3E;
+    background-color: #231f20;
 }
 
 .summary-progress p {
@@ -472,7 +476,7 @@ li.not-accomplished:before {
     text-shadow: none;
 }
 
-footer ul.list-unstyled li a {
+.footer ul.list-unstyled li a {
     color: #DADADA;
     font-size: 12px;
 }
