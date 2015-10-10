@@ -172,25 +172,41 @@ TEMPLATE_CONTEXT_PROCESSORS += (
 )
 # END OF HEROKU SPECIFICS
 
-#LOGGING
+# LOGGING
 LOGGING = {
-        'version': 1,
-        'disable_existing_loggers': True,
-        'formatters': {
-                    'simple':   {'format': '%(asctime)s %(levelname)s %(message)s'},
-                },
-        'handlers': {
-                    'console':     {'level': 'DEBUG', 'class': 'logging.StreamHandler', 'formatter': 'simple'},
-                    'null': {
-                                    'level': 'DEBUG',
-                                    'class': 'logging.NullHandler',
-                                },
-                },
-        'loggers': {
-                    'django.db.backends': {'level': 'DEBUG', 'handlers': ['null'], 'propagate': False},
-        }
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'simple':   {'format': '%(asctime)s %(levelname)s %(message)s'},
+    },
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse',
+        },
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    'handlers': {
+        'console':     {'level': 'DEBUG', 'class': 'logging.StreamHandler', 'formatter': 'simple'},
+        'null': {
+            'level': 'DEBUG',
+            'class': 'logging.NullHandler',
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'django.utils.log.AdminEmailHandler'
+        },
+    },
+    'loggers': {
+        'django.db.backends': {'level': 'DEBUG', 'handlers': ['null'], 'propagate': False},
+    }
 }
-#END LOGGING
+# END LOGGING
+
+EMAIL_SUBJECT_PREFIX = '[extremaduracumple]'
+SERVER_EMAIL = 'info@extremaduracumple.es'
 
 # DEFAULT SETTINGS
 DEFAULT_SOCIAL_NETWORKS={
