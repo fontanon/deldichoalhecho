@@ -53,6 +53,10 @@ INSTALLED_APPS = (
     'django_ace',
     'ddah_admin_section',
     'ddah_file',
+    'django_comments',
+    'mptt',
+    'tagging',
+    'zinnia',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -94,7 +98,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-SITE_ID = 1
+SITE_ID = 2
 
 USE_TZ = True
 
@@ -124,8 +128,12 @@ TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
                                "constance.context_processors.config")
 
 TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 )
+
+TEMPLATE_DIRS = ('templates',)
+
 # MultiInstance Thing
 
 BASE_HOST = os.environ.get('BASE_HOST', '127.0.0.1.xip.io:8000')
