@@ -677,6 +677,16 @@ li.not-accomplished:before {
     color: #a8f85f;
 }
 
+.copyright img.ciudadano {
+    max-width: 10em;
+    display: inline-block;
+}
+
+.zinnia .copyright .githublink {
+    display: inline-block;
+    margin-top: 1em;
+    vertical-align: top;
+}
 
 /* BLOG STYLES */
 .zinnia.default .header ul.nav a {
