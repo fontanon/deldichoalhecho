@@ -152,6 +152,10 @@ table tfoot > tr > td {
     margin-top: 2.5em;
 }
 
+.header ul.nav > li  {
+    display: inline-block;
+}
+
 .nav>li>a:hover, .nav>li>a:focus {
   background-color: transparent;
   color: black;
@@ -673,6 +677,27 @@ li.not-accomplished:before {
     color: #a8f85f;
 }
 
+
+/* BLOG STYLES */
+.zinnia .info {
+    background: #00af48;
+    border-color: #00af48;
+}
+
+.zinnia .info a {
+    color: white;
+}
+
+.zinnia.default a,
+.zinnia.default a:visited,
+.zinnia.default #sidebar h3 {
+    color: #00af48;
+}
+
+.zinnia.default .copyright a:hover {
+    color: white;
+}
+/* ENDBLOG STYLES */
 
 @media (max-width: 1200px) {
 
