@@ -679,12 +679,19 @@ li.not-accomplished:before {
 
 
 /* BLOG STYLES */
+.zinnia.default .header ul.nav a {
+    color: black;
+}
+.zinnia.default .header ul.nav a:hover {
+    text-decoration: none;
+} 
+
 .zinnia .info {
     background: #00af48;
     border-color: #00af48;
 }
 
-.zinnia .info a {
+.zinnia.default .info a {
     color: white;
 }
 
