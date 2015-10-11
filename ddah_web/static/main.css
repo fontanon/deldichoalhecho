@@ -657,7 +657,7 @@ li.not-accomplished:before {
 /*Copyright*/
 .copyright {
     font-size: 12px;
-    padding: 11px 0 7px;
+    padding: 1em 0;
     background: #3e4753;
     border-top: solid 1px #777;     
 }
@@ -667,7 +667,7 @@ li.not-accomplished:before {
 }
 
 .copyright p.copyright-space {
-    margin-top: 12px;
+    margin-top: 2em;
 }
 
 .copyright a {
@@ -678,14 +678,31 @@ li.not-accomplished:before {
     color: #a8f85f;
 }
 
-.copyright img.ciudadano {
+.copyright a.githublink {
+    float: right;
+    margin-top: 1.7em;
+}
+
+.copyrightInfo {
+    color: white;
+    position: absolute;
+    left: -2em;
+}
+
+.copyright .ciudadano {
+    display: inline-block;
+    margin-top: 1.4em
+}
+
+
+.copyright .ciudadano img {
     max-width: 10em;
     display: inline-block;
 }
 
 .zinnia .copyright .githublink {
     display: inline-block;
-    margin-top: 1em;
+    margin-top: 2.3em;
     vertical-align: top;
 }
 
