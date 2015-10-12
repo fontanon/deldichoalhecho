@@ -29,6 +29,7 @@ a:hover {
 
 .navbar-toggle {
     margin-top: 3em;
+    background: #72c02c;
 }
 
 .navbar-header .navbar-brand {
@@ -37,8 +38,10 @@ a:hover {
 }
 
 .navbar-toggle .icon-bar {
-    background: #72c02c;
+    background: white;
 }
+
+
 /*Hs*/
 
 h1 {
@@ -780,6 +783,16 @@ li.not-accomplished:before {
   .ribbon {
     width: 70%;
   }
+}
+
+@media (max-width: 767px) {
+    .navbar-collapse ul {
+        width: 100%;
+    }
+
+    .navbar-collapse ul li {
+        width: 100%;
+    }
 }
 
 @media (max-width: 400px) {
