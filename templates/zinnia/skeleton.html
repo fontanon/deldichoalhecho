@@ -29,12 +29,25 @@
     <div class="header">
         <div class="container">
           <h3 class="title"><a href="/"><img src="/static/img/logo_extremadura_cumple.png" alt="extremaduracumple" title="extremaduracumple"></a></h3>
-          <ul class="nav">      
-            <li><a href="http://extremaduracumple.es/media/compromisos/agendadelcambio.pdf">La Agenda</a></li>
-            <li><a href="/noticias/">Noticias</a></li>
-            <li><a href="http://extremaduracumple.es/pages/metodologia">Metodología</a></li>
-            <li><a href="http://www.gobex.es">Junta de Extremadura</a></li>
-          </ul>
+          <nav clas="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navar-nav">
+                    <li><a href="http://extremaduracumple.es/media/compromisos/agendadelcambio.pdf">La Agenda</a></li>
+                    <li><a href="/noticias/">Noticias</a></li>
+                    <li><a href="http://extremaduracumple.es/pages/metodologia">Metodología</a></li>
+                    <li><a href="http://www.gobex.es">Junta de Extremadura</a></li>
+                </ul>
+            </div>
+          </nav>
         </div>
     </div>
     <div class="container">
@@ -98,5 +111,7 @@
   ga('send', 'pageview');
 
 </script>
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   </body>
 </html>

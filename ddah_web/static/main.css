@@ -27,6 +27,18 @@ a:hover {
     color: #72c02c;
 }
 
+.navbar-toggle {
+    margin-top: 3em;
+}
+
+.navbar-header .navbar-brand {
+    display: none;
+    visibility: hidden;
+}
+
+.navbar-toggle .icon-bar {
+    background: #72c02c;
+}
 /*Hs*/
 
 h1 {
