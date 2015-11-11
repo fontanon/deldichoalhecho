@@ -10,4 +10,3 @@ script:
   - coverage run manage.py test
   - coverage report -m
   - coveralls --verbose
-
