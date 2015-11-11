@@ -12,7 +12,7 @@ markdown==2.6.2
 newrelic==2.54.0.41
 django-subdomain-instances==0.10.2
 -e git://github.com/ciudadanointeligente/ddah-promises.git@e924cc1d49988a5f6aafff2b48569914d0c14b49#egg=ddah-promises
--e git://github.com/bradleyayers/django-ace.git@e924cc1d49988a5f6aafff2b48569914d0c14b49#egg=django-ace
+-e git://github.com/bradleyayers/django-ace.git#egg=django-ace
 bunch==1.0.1
 json-utils==0.2
 Pystache==0.5.4
